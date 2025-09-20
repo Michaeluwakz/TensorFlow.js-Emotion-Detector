@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodSense - AI Emotion Detection</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #5e35b1, #9162e4);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .launch-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #ff4081;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 64, 129, 0.3);
+            margin: 10px;
+        }
+        
+        .launch-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 64, 129, 0.4);
+            background: #e91e63;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .feature {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .feature h3 {
+            margin-bottom: 10px;
+            color: #ff4081;
+        }
+        
+        .github-link {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .github-link a {
+            color: #42a5f5;
+            text-decoration: none;
+        }
+        
+        .github-link a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .container {
+                margin: 20px;
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎭 MoodSense</h1>
+        <p class="subtitle">AI-Powered Emotion Detection</p>
+        
+        <p class="description">
+            Experience real-time emotion detection using advanced facial landmark tracking and machine learning. 
+            Our app analyzes your facial expressions through your webcam and provides instant feedback on your emotions.
+        </p>
+        
+        <a href="Ai Motion.html" class="launch-btn">🚀 Launch App</a>
+        <a href="https://github.com/Michaeluwakz/TensorFlow.js-Emotion-Detector" class="launch-btn" target="_blank">📁 View Code</a>
+        
+        <div class="features">
+            <div class="feature">
+                <h3>🎥 Real-time Detection</h3>
+                <p>Advanced facial landmark tracking with 468 points for precise emotion analysis</p>
+            </div>
+            
+            <div class="feature">
+                <h3>🧠 AI-Powered</h3>
+                <p>Built with TensorFlow.js and MediaPipe for accurate emotion recognition</p>
+            </div>
+            
+            <div class="feature">
+                <h3>📊 Interactive Dashboard</h3>
+                <p>Live emotion display with mood history chart and confidence scoring</p>
+            </div>
+            
+            <div class="feature">
+                <h3>🔒 Privacy-First</h3>
+                <p>All processing happens locally in your browser - no data is sent to servers</p>
+            </div>
+        </div>
+        
+        <div class="github-link">
+            <p>
+                Built with ❤️ by Michael Uwakz | 
+                <a href="https://github.com/Michaeluwakz/TensorFlow.js-Emotion-Detector" target="_blank">GitHub Repository</a>
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // Add some interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const features = document.querySelectorAll('.feature');
+            
+            features.forEach((feature, index) => {
+                feature.style.opacity = '0';
+                feature.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    feature.style.transition = 'all 0.6s ease';
+                    feature.style.opacity = '1';
+                    feature.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html>
